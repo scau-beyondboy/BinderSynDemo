@@ -1,0 +1,54 @@
+apply plugin: 'com.android.model.library'
+
+model {
+    android {
+        compileSdkVersion 23
+        buildToolsVersion "23.0.3"
+
+        defaultConfig {
+           // applicationId "com.scau.beyondboy.binderservice"
+            minSdkVersion.apiLevel 15
+            targetSdkVersion.apiLevel 23
+            versionCode 1
+            versionName "1.0"
+            buildConfigFields.with {
+                create() {
+                    type = "boolean"
+                    name = "ENABLE_DEBUG"
+                    value = "false"
+                }
+            }
+        }
+        buildTypes {
+            release {
+                minifyEnabled false
+                proguardFiles.add(file("proguard-rules.pro"))
+            }
+        }
+        ndk {
+            moduleName = 'binder-service'
+            //cppFlags.add("-Werror")
+            /*cppFlags.addAll(['-std=c++11', '-Wall',
+                             '-fno-exceptions', '-fno-rtti'])*/
+            ldLibs.addAll(['log', 'android'])
+        }
+
+       /* sources {
+            main {
+                jni {
+                    exportedHeaders {
+                        srcDir "src/main/jni"
+                    }
+                }
+            }
+        }*/
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:23.4.0'
+    compile fileTree(dir: 'jniLibs', include: ['*.so'])
+    compile project(':bindercommon')
+}

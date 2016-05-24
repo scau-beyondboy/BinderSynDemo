@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/BinderSynDemo.iml" filepath="$PROJECT_DIR$/BinderSynDemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/binderclient/binderclient.iml" filepath="$PROJECT_DIR$/binderclient/binderclient.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bindercommon/bindercommon.iml" filepath="$PROJECT_DIR$/bindercommon/bindercommon.iml" />
+      <module fileurl="file://$PROJECT_DIR$/binderservice/binderservice.iml" filepath="$PROJECT_DIR$/binderservice/binderservice.iml" />
+    </modules>
+  </component>
+</project>

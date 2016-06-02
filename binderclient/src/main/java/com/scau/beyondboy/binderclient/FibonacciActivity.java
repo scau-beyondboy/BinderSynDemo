@@ -28,6 +28,7 @@ import java.util.Locale;
  * @Gmail: guoli.lxgl@alibaba-inc.com
  * @Date: 2016-05-21
  * @Time: 12:42
+ * 客户端
  */
 public class FibonacciActivity extends Activity implements View.OnClickListener,ServiceConnection{
     private static final String TAG = "FibonacciActivity";
